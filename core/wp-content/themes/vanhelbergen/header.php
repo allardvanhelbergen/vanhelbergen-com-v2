@@ -89,12 +89,14 @@
         menu and get right to the good stuff. */ ?>
     <div class="skip-link">
       <a class="assistive-text" href="#content"
-          title="<?php esc_attr_e('Skip to primary content', 'vanhelbergen'); ?>">
+          title="<?php esc_attr_e(
+              'Skip to primary content', 'vanhelbergen'); ?>">
         <?php _e( 'Skip to primary content', 'vanhelbergen' ); ?></a>
     </div>
     <div class="skip-link">
       <a class="assistive-text" href="#secondary"
-          title="<?php esc_attr_e('Skip to secondary content', 'vanhelbergen'); ?>">
+          title="<?php esc_attr_e(
+              'Skip to secondary content', 'vanhelbergen'); ?>">
         <?php _e( 'Skip to secondary content', 'vanhelbergen' ); ?></a>
     </div>
 
