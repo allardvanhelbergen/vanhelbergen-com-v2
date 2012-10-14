@@ -30,7 +30,6 @@
   <?php wp_footer(); ?>
 
   <!-- Included JS Files (Uncompressed) -->
-  <script src="javascripts/foundation/jquery.js"></script>
   <script src="javascripts/foundation/jquery.foundation.alerts.js"></script>
   <script src="javascripts/foundation/jquery.foundation.buttons.js"></script>
   <script src="javascripts/foundation/jquery.foundation.mediaQueryToggle.js">

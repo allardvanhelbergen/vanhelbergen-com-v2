@@ -82,7 +82,7 @@
 <div id="page" class="hfeed">
   <nav id="access" class="top-bar" role="navigation">
 
-    <h3 class="assistive-text">
+    <!-- <h3 class="assistive-text">
       <?php _e( 'Main menu', 'vanhelbergen' ); ?>
     </h3>
     <?php /* Allow screen readers / text browsers to skip the navigation 
@@ -98,7 +98,7 @@
           title="<?php esc_attr_e(
               'Skip to secondary content', 'vanhelbergen'); ?>">
         <?php _e( 'Skip to secondary content', 'vanhelbergen' ); ?></a>
-    </div>
+    </div> -->
 
     <ul>
       <!-- Title Area -->
