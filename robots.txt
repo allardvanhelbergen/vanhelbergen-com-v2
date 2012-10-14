@@ -1,0 +1,20 @@
+# Global
+User-agent: *
+Disallow: /core/cgi-bin/
+Disallow: /core/wp-admin/
+Disallow: /core/wp-includes/
+Disallow: /core/wp-content/plugins/
+Disallow: /core/wp-content/cache/
+Disallow: /core/wp-content/themes/
+Disallow: /core/trackback/
+Disallow: /core/feed/
+Disallow: /core/comments/
+Disallow: /core/category/*/*
+Disallow: */trackback/
+Disallow: */feed/
+Disallow: */comments/
+Disallow: /core/*?
+
+Disallow: /private-stuff/
+
+Allow: /core/wp-content/uploads/
