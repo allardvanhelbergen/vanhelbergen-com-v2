@@ -1,0 +1,23 @@
+#
+# 301 Redirects
+#
+Redirect 301 /+ http://plus.google.com/u/0/109234268385985180153
+Redirect 301 /f http://facebook.com/allard.van.helbergen
+Redirect 301 /g http://github.com/allardvanhelbergen
+Redirect 301 /l http://linkedin.com/in/allardvanhelbergen
+Redirect 301 /s http://soundcloud.com/djzoos
+Redirect 301 /t http://twitter.com/vanhelbergen
+Redirect 301 /y http://youtube.com/user/djzoos
+
+
+#
+# Begin WordPress
+#
+<IfModule mod_rewrite.c>
+	RewriteEngine On
+	RewriteBase /
+	RewriteRule ^index\.php$ - [L]
+	RewriteCond %{REQUEST_FILENAME} !-f
+	RewriteCond %{REQUEST_FILENAME} !-d
+	RewriteRule . /index.php [L]
+</IfModule>
