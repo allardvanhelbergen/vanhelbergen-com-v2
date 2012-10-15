@@ -33,10 +33,10 @@
      */
     global $page, $paged;
 
-    wp_title( '|', true, 'right' );
+    wp_title( ' | ', true, 'left' );
 
     // Add the blog name.
-    bloginfo( 'name' );
+    //bloginfo( 'name' );
 
     // Add the blog description for the home/front page.
     $site_description = get_bloginfo( 'description', 'display' );
