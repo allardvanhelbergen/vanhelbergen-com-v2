@@ -1,7 +1,12 @@
 /**
- * Styles for the topbar
+ * Styles for the topbar.
  */
 
+.top-bar {
+  @include background(linear-gradient(top left, #444, #222));
+  @include single-box-shadow;
+}
+
 .top-bar .name h1 {
-  font-size: ms(3);
+  font-size: ms(2);
 }
