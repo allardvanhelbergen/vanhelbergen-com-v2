@@ -115,60 +115,19 @@
 
     <section>
       <!-- Right Nav Section -->
-      <?php /* Our navigation menu. If one isn't filled out, wp_nav_menu
-        falls back to wp_page_menu. The menu assigned to the primary
-        location is the one used. If one isn't assigned, the menu with the
-        lowest ID is used. */ ?>
-      <?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
-      <ul class="right">
-        <li class="divider"></li>
-        <li class="has-dropdown">
-          <a href="#">Main Item 1</a>
-          <ul class="dropdown">
-            <li><label>Section Name</label></li>
-            <li class="has-dropdown">
-              <a href="#" class="">Has Dropdown, Level 1</a>
-              <ul class="dropdown">
-                <li><a href="#">Dropdown Options</a></li>
-              </ul>
-            </li>
-            <li><a href="#">Dropdown Option</a></li>
-            <li class="divider"></li>
-            <li><label>Section Name</label></li>
-            <li><a href="#">Dropdown Option</a></li>
-            <li class="divider"></li>
-            <li><a href="#">See all &rarr;</a></li>
-          </ul>
-        </li>
-        <li class="divider"></li>
-        <li><a href="#">Main Item 2</a></li>
-        <li class="divider"></li>
-        <li class="has-dropdown">
-          <a href="#">Main Item 3</a>
-          <ul class="dropdown">
-            <li><a href="#">Dropdown Option</a></li>
-            <li class="divider"></li>
-            <li><a href="#">See all &rarr;</a></li>
-          </ul>
-        </li>
-      </ul>
+      <?php 
+      /**
+       * Our navigation menu. If one isn't filled out, wp_nav_menu
+       * falls back to wp_page_menu. The menu assigned to the primary
+       * location is the one used. If one isn't assigned, the menu with the
+       * lowest ID is used.
+       */ 
+      // TODO(allard): Create custom walker to add divider between li elements.
+      wp_nav_menu( array(
+        'menu_class' => 'right',
+        'theme_location' => 'primary'
+      ) ); ?>
     </section>
   </nav><!-- #access -->
-
-  <header id="branding" role="banner" class="row">
-    <hgroup class="twelve columns">
-      <h1 id="site-title">
-        <span>
-          <a href="<?php echo esc_url( home_url( '/' ) ); ?>" 
-              title="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>"
-              rel="home">
-            <?php bloginfo( 'name' ); ?></a>
-        </span>
-      </h1>
-      <h2 id="site-description">
-        <?php bloginfo( 'description' ); ?>
-      </h2>
-    </hgroup>
-  </header><!-- #branding -->
 
   <div id="main" class="row">
