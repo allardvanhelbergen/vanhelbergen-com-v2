@@ -1,0 +1,10 @@
+/**
+ * Styles for the footer.
+ */
+
+@include sticky-footer(170px, "#page", "#footer-push", "#footer");
+
+.mastfoot {
+  background-color: gray;
+  padding: 1em;
+}

@@ -9,6 +9,7 @@
 // and uncommenting what you want below. You must uncomment the following if customizing
 
 @import "compass/css3";
+@import "compass/layout";
 @import "foundation/settings";
 @import "foundation/functions/all";
 
@@ -49,4 +50,5 @@
 
 // ----------------------------------------
 // Allard's stuff
-@import "topbar"
+@import "footer";
+@import "topbar";

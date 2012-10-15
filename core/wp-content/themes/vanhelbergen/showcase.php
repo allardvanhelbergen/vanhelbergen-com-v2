@@ -19,18 +19,19 @@
 get_header(); ?>
 
     <div id="primary" class="showcase twelve columns">
-      <header id="branding" role="banner" class="row">
-        <hgroup class="twelve columns">
+      <header id="branding" role="banner">
+        <hgroup>
           <h1 id="site-title">
             <span>
               <a href="<?php echo esc_url( home_url( '/' ) ); ?>" 
                   title="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>"
                   rel="home">
                 <?php bloginfo( 'name' ); ?></a>
-            </span>
+            </span> |
+            <small><?php bloginfo( 'description' ); ?></small>
           </h1>
           <h2 id="site-description">
-            <?php bloginfo( 'description' ); ?>
+            
           </h2>
         </hgroup>
       </header><!-- #branding -->
