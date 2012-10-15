@@ -61,7 +61,9 @@
   <!--[if lt IE 9]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
-  <script src="javascripts/foundation/modernizr.foundation.js"></script>
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+  <script src="<?php bloginfo( 'stylesheet_directory' ); ?>/js/foundation/modernizr.foundation.js"></script>
   <?php
     /* We add some JavaScript to pages with the comment form
      * to support sites with threaded comments (when in use).

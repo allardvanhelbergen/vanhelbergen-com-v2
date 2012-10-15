@@ -30,13 +30,13 @@
   <?php wp_footer(); ?>
 
   <!-- Included JS Files (Uncompressed) -->
-  <script src="javascripts/foundation/jquery.foundation.alerts.js"></script>
-  <script src="javascripts/foundation/jquery.foundation.buttons.js"></script>
-  <script src="javascripts/foundation/jquery.foundation.mediaQueryToggle.js">
+  <script src="<?php bloginfo( 'stylesheet_directory' ); ?>/js/foundation/app.js"></script>
+  <script src="<?php bloginfo( 'stylesheet_directory' ); ?>/js/foundation/jquery.foundation.alerts.js"></script>
+  <script src="<?php bloginfo( 'stylesheet_directory' ); ?>/js/foundation/jquery.foundation.buttons.js"></script>
+  <script src="<?php bloginfo( 'stylesheet_directory' ); ?>/js/foundation/jquery.foundation.mediaQueryToggle.js">
   </script>
-  <script src="javascripts/foundation/jquery.foundation.navigation.js"></script>
-  <script src="javascripts/foundation/jquery.foundation.topbar.js"></script>
+  <script src="<?php bloginfo( 'stylesheet_directory' ); ?>/js/foundation/jquery.foundation.topbar.js"></script>
   <!-- Application Javascript, safe to override -->
-  <script src="javascripts/foundation/app.js"></script>
+  <script src="<?php bloginfo( 'stylesheet_directory' ); ?>/js/foundation/app.js"></script>
 </body>
 </html>
