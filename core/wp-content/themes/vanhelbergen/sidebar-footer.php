@@ -21,12 +21,15 @@
     return;
   // If we get this far, we have widgets. Let do this.
 ?>
-<div id="supplementary" class="row" <?php twentyeleven_footer_sidebar_class(); ?>>
-  <div id="first" class="widget-area six columns" role="complementary">
+<div id="supplementary" class="row" 
+    <?php twentyeleven_footer_sidebar_class(); ?>>
+  <div id="first" class="widget-area six columns footer-menu" 
+      role="complementary">
     <?php dynamic_sidebar( 'sidebar-3' ); ?>
   </div><!-- #first .widget-area -->
 
-  <div id="third" class="widget-area six columns" role="complementary">
+  <div id="third" class="widget-area six columns footer-menu" 
+      role="complementary">
     <?php dynamic_sidebar( 'sidebar-5' ); ?>
   </div><!-- #third .widget-area -->
 </div><!-- #supplementary -->

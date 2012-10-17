@@ -2,9 +2,28 @@
  * Styles for the footer.
  */
 
-@include sticky-footer(170px, "#page", "#footer-push", "#footer");
+@include sticky-footer(187px, "#page", "#footer-push", "#footer");
 
 .mastfoot {
-  background-color: gray;
-  padding: 1em;
+  background-color: Lightgrey;
+  @include background(linear-gradient(top, #999, #aaa));
+  font-size: ms(10);
+  padding: $baseFontSize;
+
+  aside p,
+  li {
+    font-size: ms(0);
+  }
+
+  #first {
+    text-align:right;
+  }
+
+  .footer-menu {
+    @include no-bullets;
+
+    ul li a {
+      @include unstyled-link;
+    }
+  }
 }

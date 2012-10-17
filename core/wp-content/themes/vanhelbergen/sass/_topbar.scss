@@ -3,10 +3,6 @@
  */
 
 .top-bar {
-  @include background(linear-gradient(top left, #444, #222));
+  @include background(linear-gradient(top, #444, #222));
   @include single-box-shadow;
-}
-
-.top-bar .name h1 {
-  font-size: ms(2);
 }
