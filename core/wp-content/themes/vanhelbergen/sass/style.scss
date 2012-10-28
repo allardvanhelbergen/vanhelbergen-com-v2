@@ -1,18 +1,26 @@
 // You custom settings file to override Foundation defaults
-@import "settings";
+/**
+ * Global style sheet for vanhelbergen.com.
+ */
 
-// Comment out this import if you are customizing you imports below
+/**
+ * General Foundation Import.
+ */
+@import "settings";
 @import "foundation";
 
-// ----------------------------------------
-// Compass stuff
+
+/**
+ * Compass imports.
+ */
 @import "compass/css3";
 @import "compass/layout";
 @import "compass/typography";
 
 
-
-// ----------------------------------------
-// Allard's stuff
+/**
+ * Site specific imports.
+ */
 @import "footer";
+@import "showcase";
 @import "topbar";

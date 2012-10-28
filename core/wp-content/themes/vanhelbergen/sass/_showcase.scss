@@ -1,0 +1,28 @@
+#branding {
+  margin-bottom: 10ex;
+  text-align: center;
+
+  #site-title {
+    @include text-shadow(
+        0px 1px 0px shade($mainColor, 10%),
+        0px 2px 0px shade($mainColor, 15%),
+        0px 3px 0px shade($mainColor, 20%),
+        0px 4px 0px shade($mainColor, 25%),
+        0px 5px 0px shade($mainColor, 30%),
+        0px 6px 0px shade($mainColor, 35%),
+        0px 7px 0px shade($mainColor, 40%),
+        0px 8px 5px shade($backgroundColor, 50%));
+    color: $mainColor;
+  }
+
+  #site-description {
+    @include text-shadow(0px 2px 3px tint($backgroundColor, 30%));
+    color: shade($backgroundColor, 10%);
+  }
+}
+
+.recent-posts {
+  li {
+    list-style-type: none;
+  }
+}

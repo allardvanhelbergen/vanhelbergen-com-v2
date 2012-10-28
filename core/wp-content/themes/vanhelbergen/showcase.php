@@ -21,18 +21,11 @@ get_header(); ?>
     <div id="primary" class="showcase twelve columns">
       <header id="branding" role="banner">
         <hgroup>
-          <h1 id="site-title">
-            <span>
-              <a href="<?php echo esc_url( home_url( '/' ) ); ?>" 
-                  title="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>"
-                  rel="home">
-                <?php bloginfo( 'name' ); ?></a>
-            </span> |
-            <small><?php bloginfo( 'description' ); ?></small>
+          <h1>
+            <span id="site-title">Hi, I’m Allard.</span><br>
+            <small id="site-description">
+              <?php bloginfo( 'description' ); ?></small>
           </h1>
-          <h2 id="site-description">
-            
-          </h2>
         </hgroup>
       </header><!-- #branding -->
     
@@ -45,19 +38,20 @@ get_header(); ?>
              * If we have content for this page, let's display it.
              */
             if ( '' != get_the_content() )
-              get_template_part( 'content', 'intro' );
+              get_template_part( 'content', 'page' );
           ?>
         <?php endwhile; ?>
 
-        <section class="recent-posts">
-          <h3 class="showcase-heading">
-            <?php _e( 'Recent Posts', 'twentyeleven' ); ?>
-          </h3>
+        
+      </div><!-- #content -->
+
+      <div class="complementary-info row" role="complementary">
+        <section class="recent-posts four columns offset-by-one">
+          <h4 class="showcase-heading subheader">
+            <?php _e( 'Recent Blog Posts', 'vanhelbergen' ); ?>
+          </h4>
 
           <?php
-
-          // Display our recent posts, showing full content for the very latest,
-          // ignoring Aside posts.
           $recent_args = array(
             'order' => 'DESC',
             'post__not_in' => get_option( 'sticky_posts' ),
@@ -77,8 +71,11 @@ get_header(); ?>
             'no_found_rows' => true,
           );
 
-          // Our new query for the Recent Posts section.
+          // Query for the Recent Posts section.
           $recent = new WP_Query( $recent_args );
+
+          if ( $recent->post_count > 0 )
+            echo '<ol class="other-recent-posts">';
 
           // For all recent posts, just display the title and comment 
           // status.
@@ -87,17 +84,10 @@ get_header(); ?>
             <li class="entry-title">
               <a href="<?php the_permalink(); ?>" 
                   title="<?php printf( 
-                      esc_attr__( 'Permalink to %s', 'twentyeleven' ),
+                      esc_attr__( 'Permalink to %s', 'vanhelbergen' ),
                       the_title_attribute( 'echo=0' ) ); ?>" 
                   rel="bookmark">
                 <?php the_title(); ?></a>
-              <span class="comments-link">
-                <?php comments_popup_link( 
-                    '<span class="leave-reply">' . 
-                        __( 'Leave a reply', 'twentyeleven' ) . '</span>', 
-                    __( '<b>1</b> Reply', 'twentyeleven' ), 
-                    __( '<b>%</b> Replies', 'twentyeleven' ) ); ?>
-              </span>
             </li>
 
           <?php
@@ -108,7 +98,15 @@ get_header(); ?>
             echo '</ol>';
           ?>
         </section><!-- .recent-posts -->
-      </div><!-- #content -->
+
+        <section class="recent-portfolio-posts four columns offset-by-two">
+          <h4 class="showcase-heading subheader">
+            <?php _e( 'Portfolio Highlights', 'vanhelbergen' ); ?>
+          </h4>
+        </section><!-- .recent-portfolio-posts -->
+
+        <div class="one coulumns"></div>
+      </div><!-- .complementary-info -->
     </div><!-- #primary -->
 
 <?php get_footer(); ?>

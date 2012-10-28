@@ -22,7 +22,6 @@
   <?php wp_footer(); ?>
 
   <!-- Included JS Files (Uncompressed) -->
-  <script src="<?php bloginfo( 'stylesheet_directory' ); ?>/js/foundation/app.js"></script>
   <script src="<?php bloginfo( 'stylesheet_directory' ); ?>/js/foundation/jquery.foundation.alerts.js"></script>
   <script src="<?php bloginfo( 'stylesheet_directory' ); ?>/js/foundation/jquery.foundation.buttons.js"></script>
   <script src="<?php bloginfo( 'stylesheet_directory' ); ?>/js/foundation/jquery.foundation.mediaQueryToggle.js">

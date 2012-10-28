@@ -7,23 +7,28 @@
 .mastfoot {
   background-color: Lightgrey;
   @include background(linear-gradient(top, #999, #aaa));
-  font-size: ms(10);
-  padding: $baseFontSize;
+  color: shade($backgroundColor, 10%);
+  margin-top: 5 * $baseFontSize;
+  padding: 2 * $baseFontSize;
+  text-align: center;
 
-  aside p,
+  p,
   li {
-    font-size: ms(0);
-  }
-
-  #first {
-    text-align:right;
+    font-size: ms(-1);
   }
 
   .footer-menu {
-    @include no-bullets;
-
-    ul li a {
+    a {
       @include unstyled-link;
+      @include hover-link;
+    }
+
+    ul {
+      text-align: center;
+    }
+
+    ul li {
+      display: inline;
     }
   }
 }
