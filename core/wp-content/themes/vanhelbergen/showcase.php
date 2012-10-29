@@ -101,8 +101,12 @@ get_header(); ?>
 
         <section class="recent-portfolio-posts four columns offset-by-two">
           <h4 class="showcase-heading subheader">
-            <?php _e( 'Portfolio Highlights', 'vanhelbergen' ); ?>
+            <?php _e( 'Portfolio', 'vanhelbergen' ); ?>
           </h4>
+          <p>
+            Check out some of my work in my 
+            <a href="http://vanhelbergen.com/portfolio/">portfolio</a>.
+          </p>
         </section><!-- .recent-portfolio-posts -->
 
         <div class="one coulumns"></div>
