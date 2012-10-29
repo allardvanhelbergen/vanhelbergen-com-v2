@@ -13,6 +13,9 @@
  */
 
 get_header(); ?>
+<div class="mega-title twelve columns">
+	<h1>Blog</h1>
+</div><!-- .mega-title -->
 
 <div id="primary" class="eight columns">
 	<div id="content" role="main">
@@ -23,7 +26,7 @@ get_header(); ?>
 
 		<?php /* Start the Loop */ ?>
 		<?php while ( have_posts() ) : the_post(); ?>
-			<?php get_template_part( 'content', get_post_format() ); ?>
+			<?php get_template_part( 'content', 'intro' ); ?>
 		<?php endwhile; ?>
 
 		<?php twentyeleven_content_nav( 'nav-below' ); ?>
@@ -31,9 +34,9 @@ get_header(); ?>
 	<?php else : ?>
 		<article id="post-0" class="post no-results not-found">
 			<header class="entry-header">
-				<h1 class="entry-title">
+				<h2 class="entry-title">
 					<?php _e( 'Nothing Found', 'vanhelbergen' ); ?>
-				</h1>
+				</h2>
 			</header><!-- .entry-header -->
 
 			<div class="entry-content">

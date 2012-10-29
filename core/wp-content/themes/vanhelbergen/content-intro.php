@@ -1,21 +1,48 @@
 <?php
 /**
- * The template for displaying page content in the showcase.php page template
+ * The default template for displaying content
  *
  * @package WordPress
- * @subpackage Twenty_Eleven
- * @since Twenty Eleven 1.0
+ * @subpackage van_Helbergen
+ * @since van Helbergen 1.0
  */
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class( 'intro' ); ?>>
-	<header class="entry-header">
-		<h2 class="entry-title"><?php the_title(); ?></h2>
-	</header><!-- .entry-header -->
+  <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+    <header class="entry-header">
+      <?php if ( is_sticky() ) : ?>
+        <hgroup>
+          <h2 class="entry-title">
+            <a href="<?php the_permalink(); ?>" 
+                title="<?php printf( 
+                    esc_attr__( 'Permalink to %s', 'twentyeleven' ),
+                    the_title_attribute( 'echo=0' ) ); ?>" 
+                rel="bookmark">
+              <?php the_title(); ?></a>
+          </h2>
+          <h3 class="entry-format">
+            <?php _e( 'Featured', 'twentyeleven' ); ?>
+          </h3>
+        </hgroup>
+      <?php else : ?>
+        <h2 class="entry-title">
+          <a href="<?php the_permalink(); ?>" 
+              title="<?php printf( 
+                  esc_attr__( 'Permalink to %s', 'twentyeleven' ), 
+                  the_title_attribute( 'echo=0' ) ); ?>" 
+              rel="bookmark">
+            <?php the_title(); ?></a>
+        </h2>
+      <?php endif; ?>
 
-	<div class="entry-content">
-		<?php the_content(); ?>
-		<?php wp_link_pages( array( 'before' => '<div class="page-link"><span>' . __( 'Pages:', 'twentyeleven' ) . '</span>', 'after' => '</div>' ) ); ?>
-		<?php edit_post_link( __( 'Edit', 'twentyeleven' ), '<span class="edit-link">', '</span>' ); ?>
-	</div><!-- .entry-content -->
-</article><!-- #post-<?php the_ID(); ?> -->
+      <?php if ( 'post' == get_post_type() ) : ?>
+        <div class="entry-meta">
+          <?php twentyeleven_posted_on(); ?>
+        </div><!-- .entry-meta -->
+      <?php endif; ?>
+    </header><!-- .entry-header -->
+
+    <div class="entry-summary">
+      <?php the_excerpt(); ?>
+    </div><!-- .entry-summary -->
+  </article><!-- #post-<?php the_ID(); ?> -->

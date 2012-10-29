@@ -1,0 +1,16 @@
+/**
+ * Styles for blog pages.
+ */
+
+#archives ul {
+  list-style-type: none;
+}
+
+.entry-meta {
+  color: tint($txtColor, 75%);
+  font-style: oblique;
+}
+
+.post {
+  margin-bottom: 6 * $baseFontSize;
+}
