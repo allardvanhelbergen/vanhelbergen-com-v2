@@ -14,4 +14,9 @@
 
 .post {
   margin-bottom: 6 * $baseFontSize;
+
+  ul,
+  ol {
+    list-style-position: outside;
+  }
 }
