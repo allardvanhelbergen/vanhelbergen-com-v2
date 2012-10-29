@@ -125,8 +125,6 @@ get_header(); ?>
                   'twentyeleven' ) ); ?></span>
       </nav><!-- #nav-single -->
 
-      <?php comments_template( '', true ); ?>
-
     </div><!-- #content -->
   </div><!-- #primary -->
 <?php endwhile; // end of the loop. ?>
