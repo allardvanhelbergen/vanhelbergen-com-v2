@@ -117,7 +117,7 @@ get_header(); ?>
           <?php previous_post_link( 
               '%link', __( 
                   '<span class="meta-nav">&larr;</span> Previous',
-                  'twentyeleven' ) ); ?></span>
+                  'twentyeleven' ) ); ?></span> |
         <span class="nav-next">
           <?php next_post_link( 
               '%link', __( 
