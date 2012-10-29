@@ -17,10 +17,15 @@
         0px 7px 0px shade($mainColor, 40%),
         0px 8px 5px shade($backgroundColor, 50%));
     color: $mainColor;
+    font-size: ms(7);
   }
 
   #site-description {
     @include text-shadow(0px 2px 3px tint($backgroundColor, 30%));
+    @media only screen and (max-width: 767px) {
+      display: none;
+    }
+
     color: shade($backgroundColor, 10%);
   }
 }
